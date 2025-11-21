@@ -1,0 +1,104 @@
+/*Universal */
+p {
+    font-family: Lora;
+    margin-left: 10px ;
+}
+
+
+/* Header */
+nav {
+    font-family: "EB Garamond";
+    float: right;
+    
+}
+
+nav li {
+    text-decoration: none;
+    display: inline-flex;
+    margin: 0 10px;
+}
+
+nav ul li a { /** This is the style for the navigation bar**/
+    display: inline;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+nav ul li a:hover { /**Changes the hover behavior for nav bar**/
+    color: rgb(219,135,128); /** Tiger Lily pink is a sweet but professional color that compliments the nature of the content */  
+   
+}
+
+
+
+/*Banners */
+
+.banner {
+    background-image: url();
+    background-size: cover;
+    height: 100px;
+    text-align: center;
+    color: black;
+    font-size: 36px;
+    padding-top: 50px;
+}
+
+.banner span {
+    font-size: 30px;
+    display: inline-flex;
+    color: pink;
+}
+
+#banner_img {
+    width: 100%;
+    height: 200px;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.services ul li a {
+    font-family: Lora;
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    width: 200px;
+    text-align: center;
+    
+}
+
+footer {
+    background-color: rgb(219,135,128);
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+body {
+    font-family: Lora;
+    background-color: rgb(250, 246, 242);
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    width: 10px;
+    height: 10px;
+    display: inline;
+    position: absolute;
+    z-index: 1;
+}
+
+.container {
+    display: inline;
+    position: relative;
+    padding-left: 10px;
+}
