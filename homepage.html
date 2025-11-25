@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Syakira - Obstetrics & Gynecology</title>
+    
+    <!-- Security Headers (Simulated for meta tags where possible) -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="description" content="Compassionate Obstetrics and Gynecology care by Dr. Syakira. Book your appointment today.">
+
+    <!-- LINK TO SEPARATE STYLESHEET -->
+    <link rel="stylesheet" href="styles2.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <nav>
+            <div class="logo">
+                Dr Syakira - O&G Specialist
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="Health Blog.html">Health Blog</a></li>
+                <li><a href="#contact" class="btn btn-outline" style="padding: 5px 15px;">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-right">
+            <h1>Empowering Women's Health at Every Stage</h1>
+            <p>Compassionate, evidence-based Obstetrics and Gynecology care tailored to your unique journey. From prenatal care to complex gynecological needs.</p>
+            <a href="#contact" class="btn">Book Appointment</a>
+        </div>
+        <!-- Image handled by CSS background for better layout control -->
+    </section>
+
+    <!-- ABOUT ME -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div data-aos="fade-right">
+                    <img src="Media/images/about-photo1.jpg" alt="Dr Syakira" class="about-img">
+                </div>
+                <div data-aos="fade-left">
+                    <h2>About Dr. Syakira</h2>
+                    <p>Hi, I am Dr. Syakira Kamal, a dedicated Consultant Obstetrician & Gynecologist. My practice is built on the core tenets of empathy, safety, and patient autonomy. By providing clear understanding of your circumstances and potential outcomes, I can empower you to make the best choices for you and your baby. </p>
+                    <p>With over 10 years of experience in high-risk obstetrics and minimally invasive gynecology, I strive to provide a safe space where your concerns are heard and addressed with professional excellence.</p>
+                    
+                    <div style="margin-top: 20px;">
+                        <h3>Credentials</h3>
+                        <ul style="list-style: none; font-family: var(--font-body);">
+                            <li><i class="fas fa-check-circle" style="color: var(--text-heading); margin-right: 10px;"></i>MBBS (University of Birmingham)</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--text-heading); margin-right: 10px;"></i>MRCOG (UK)</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--text-heading); margin-right: 10px;"></i>Fellowship in Maternal Medicine and Urogynecology</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Our Services</h2>
+            <p style="text-align: center;">Comprehensive care for every phase of womanhood.</p>
+            
+            <div class="service-cards">
+                <div class="card" data-aos="flip-left" data-aos-delay="100">
+                    <i class="fas fa-baby-carriage"></i>
+                    <h3>Obstetrics</h3
+                    <ul>Antenatal care,</ul>
+                    <ul>High-risk prenancy management,</ul>
+                    <ul>Growth scans,</ul>
+                    <ul>Safe delivery planning</ul>
+                </div>
+                <div class="card" data-aos="flip-left" data-aos-delay="200">
+                    <i class="fas fa-female"></i>
+                    <h3>Gynecology,</h3>
+                    <ul>Endometriosis,</ul>
+                    <ul>Menstrual dis`orders</ul>
+                    <ul>PCOS management,</ul>
+                    <ul>Urinary incontinence,</ul>
+                    <ul>Fertility assessments.</ul>
+                </div>
+                <div class="card" data-aos="flip-left" data-aos-delay="300">
+                    <i class="fas fa-stethoscope"></i>
+                    <h3>Surgery</h3>
+                    <ul>Minimally invasive laparoscopy,</ul>
+                    <ul>Robotics surgery,</ul>
+                    <ul>Hysteroscopy</ul>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PATIENT TESTIMONIALS -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Patient Stories</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+                    <p>Dr. Syakira made my high-risk pregnancy feel manageable. Her calm demeanor and expertise were exactly what we needed.</p>
+                    <cite>- Sarah J.</cite>
+                </div>
+                <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+                    <p>Finally, a doctor who truly listens. The care I received for my endometriosis was life-changing. Highly recommended.</p>
+                    <cite>- Emily R.</cite>
+                </div>
+                <div class="testimonial" data-aos="fade-up" data-aos-delay="300">
+                    <p>Professional, kind, and incredibly knowledgeable. The clinic environment is so welcoming and not intimidating at all.</p>
+                    <cite>- Ubi K.</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING & CONTACT -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Left Side Info -->
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>We are here to help. Please fill out the form or contact us directly.</p>
+                    
+                    <div style="margin-top: 30px;">
+                        <p><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> +123 456 7890</p>
+                        <p><i class="fas fa-envelope" style="margin-right: 10px;"></i> clinic@drsyakira.com</p>
+                        <p><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Obstetrics & Gynecology Suite, Avisena Hospital, KL</p>
+                    </div>
+
+                    <div class="social-icons" style="margin-top: 30px;">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Right Side Form -->
+                <div class="contact-form-wrapper">
+                    <h3>Request Appointment</h3>
+                    <!-- 
+                        SECURITY NOTE: 
+                        In a real deployment, this form should post to a secure backend.
+                        CSRF tokens and server-side validation are required.
+                    -->
+                    <form action="#" method="POST" onsubmit="return validateForm()">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="jane@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Type of Care</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="care_type" value="obs"> Obstetrics</label>
+                                <label><input type="radio" name="care_type" value="gyn"> Gynecology</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="concern">How can we help you?</label>
+                            <textarea id="concern" name="concern" rows="4" placeholder="Please describe the issue or concern you want us to help you with and we will try our best to ensure you get the care you need"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn" style="width: 100%;">Secure Submission</button>
+                        <p style="font-size: 0.8rem; color: #777; margin-top: 10px;">
+                            <i class="fas fa-lock"></i> Your data is encrypted and processed in compliance with GDPR.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECURITY COMPLIANCE BADGE -->
+    <section class="security-section">
+        <div class="container">
+            <h4 style="color: #555; font-size: 1rem;">Patient Data Safety & Security Standards</h4>
+            <div class="security-icons">
+                <div class="security-item">
+                    <i class="fas fa-shield-alt fa-2x" style="color: var(--text-heading);"></i>
+                    <span>GDPR Compliant</span>
+                </div>
+                <div class="security-item">
+                    <i class="fas fa-lock fa-2x" style="color: var(--text-heading);"></i>
+                    <span>SSL Encrypted</span>
+                </div>
+                <div class="security-item">
+                    <i class="fas fa-server fa-2x" style="color: var(--text-heading);"></i>
+                    <span>DDoS Protection</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>O&GbyDrSyakira</h4>
+                <p>Empowering the best for you and your baby</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="#about">About Me</a>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#blog">Health Blog</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Dr. Syakira O&G. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animation on Scroll
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Simple Form Validation Alert (To demonstrate security awareness)
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const concern = document.getElementById('concern').value;
+            
+            // Simulate Input Sanitization Check
+            if (concern.includes('<script>') || concern.includes('SELECT *')) {
+                alert("Security Alert: Invalid characters detected.");
+                return false;
+            }
+            
+            alert("Thank you, " + name + ". Your encrypted request has been sent to our secure server.");
+            return false; // Prevent actual submission for this demo
+        }
+    </script>
+</body>
+</html>
