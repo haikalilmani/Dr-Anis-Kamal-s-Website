@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Blog - Dr. Syakira O&G</title>
+    
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="description" content="Read expert insights on women's health, obstetrics, gynecology, and pregnancy care from Dr. Syakira.">
+
+    <!-- LINK TO SEPARATE STYLESHEET -->
+    <link rel="stylesheet" href="styles2.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Blog-specific styles */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .blog-card-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: var(--bg-secondary);
+        }
+
+        .blog-card-content {
+            padding: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: var(--text-heading);
+            margin-bottom: 10px;
+            font-family: var(--font-heading);
+        }
+
+        .blog-date {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .blog-category {
+            display: inline-block;
+            background-color: var(--bg-secondary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .blog-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .blog-excerpt {
+            color: #666;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .blog-read-more {
+            align-self: flex-start;
+            color: var(--text-heading);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s ease;
+        }
+
+        .blog-read-more:hover {
+            gap: 12px;
+            color: var(--accent-hover);
+        }
+
+        .blog-featured {
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+        }
+
+        .blog-featured-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .blog-featured-content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: white;
+        }
+
+        .blog-featured h3 {
+            font-size: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .blog-featured {
+                grid-column: span 1;
+                grid-template-columns: 1fr;
+            }
+
+            .blog-featured-image {
+                height: 200px;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <nav>
+            <div class="logo">
+                Dr Syakira - O&G Specialist
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="homepage.html#about">About</a></li>
+                <li><a href="homepage.html#services">Services</a></li>
+                <li><a href="homepage.html#testimonials">Testimonials</a></li>
+                <li><a href="blog.html">Health Blog</a></li>
+                <li><a href="homepage.html#contact" class="btn btn-outline" style="padding: 5px 15px;">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-right">
+            <h1>Health Insights & Expert Advice</h1>
+            <p>Discover evidence-based articles on women's health, pregnancy care, gynecological conditions, and wellness tips from Dr. Syakira.</p>
+        </div>
+    </section>
+
+    <!-- BLOG POSTS SECTION -->
+    <section class="blog-section">
+        <div class="container">
+            <h2 data-aos="fade-up" style="text-align: center; margin-bottom: 10px;">Latest Articles</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 40px;">Expert insights on women's health and wellness</p>
+
+            <div class="blog-grid">
+                <!-- Featured Blog Post -->
+                <div class="blog-card blog-featured" data-aos="fade-up">
+                    <img src="Media/images/blog-featured.jpg" alt="Prenatal Care Guide" class="blog-featured-image">
+                    <div class="blog-featured-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="fas fa-calendar"></i> Dec 1, 2024</span>
+                            <span class="blog-category">Obstetrics</span>
+                        </div>
+                        <h3>Complete Guide to Prenatal Care: What Every Mother Should Know</h3>
+                        <p class="blog-excerpt">Explore the comprehensive journey of prenatal care, from early pregnancy screening to delivery planning. Learn about essential tests, nutrition, and when to seek specialized care.</p>
+                        <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Regular Blog Posts -->
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="Media/images/blog-endometriosis.jpg" alt="Endometriosis" class="blog-card-image">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="fas fa-calendar"></i> Nov 28, 2024</span>
+                        </div>
+                        <span class="blog-category">Gynecology</span>
+                        <h3>Understanding Endometriosis: Symptoms, Diagnosis & Treatment</h3>
+                        <p class="blog-excerpt">Endometriosis affects millions of women. Learn how to recognize symptoms early, what diagnostic options are available, and the latest minimally invasive treatment approaches.</p>
+                        <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="Media/images/blog-pcos.jpg" alt="PCOS Management" class="blog-card-image">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="fas fa-calendar"></i> Nov 25, 2024</span>
+                        </div>
+                        <span class="blog-category">Gynecology</span>
+                        <h3>PCOS Management: Lifestyle Changes & Medical Options</h3>
+                        <p class="blog-excerpt">Polycystic Ovary Syndrome (PCOS) is manageable with the right approach. Discover evidence-based strategies for managing symptoms and improving fertility outcomes.</p>
+                        <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="Media/images/blog-menopause.jpg" alt="Menopause" class="blog-card-image">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="fas fa-calendar"></i> Nov 20, 2024</span>
+                        </div>
+                        <span class="blog-category">Women's Health</span>
+                        <h3>Navigating Menopause: Managing Symptoms Naturally & Medically</h3>
+                        <p class="blog-excerpt">Menopause is a natural transition. Learn about hormonal changes, symptom management strategies, and when to consider hormone replacement therapy options.</p>
+                        <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="Media/images/blog-contraception.jpg" alt="Contraception" class="blog-card-image">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="fas fa-calendar"></i> Nov 15, 2024</span>
+                        </div>
+                        <span class="blog-category">Gynecology</span>
+                        <h3>Choosing the Right Contraception: A Comprehensive Overview</h3>
+                        <p class="blog-excerpt">Navigate the many contraception options available. From hormonal to barrier methods, discover which option aligns best with your lifestyle and health profile.</p>
+                        <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="500">
+                    <img src="Media/images/blog-fertility.jpg" alt="Fertility" class="blog-card-image">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="fas fa-calendar"></i> Nov 10, 2024</span>
+                        </div>
+                        <span class="blog-category">Fertility</span>
+                        <h3>Fertility Assessments: What You Need to Know</h3>
+                        <p class="blog-excerpt">When to seek fertility evaluation, what tests are involved, and how modern reproductive medicine can help you achieve your family-building goals.</p>
+                        <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>O&GbyDrSyakira</h4>
+                <p>Empowering the best for you and your baby</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="homepage.html#about">About Me</a>
+                <a href="homepage.html#services">Services</a>
+                <a href="homepage.html#testimonials">Testimonials</a>
+                <a href="blog.html">Health Blog</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Dr. Syakira O&G. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animation on Scroll
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

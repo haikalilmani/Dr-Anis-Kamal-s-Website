@@ -32,11 +32,11 @@
                 Dr Syakira - O&G Specialist
             </div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="homepage.html">Testimonials</a></li>
-                <li><a href="#blog">Health Blog</a></li>
-                <li><a href="#contact" class="btn btn-outline" style="padding: 5px 15px;">Contact</a></li>
+                <li><a href="homepage.html#about">About</a></li>
+                <li><a href="homepage.html#services">Services</a></li>
+                <li><a href="homepage.html#testimonials">Testimonials</a></li>
+                <li><a href="Health Blog.html">Health Blog</a></li>
+                <li><a href="homepage.html#contact" class="btn btn-outline" style="padding: 5px 15px;">Contact</a></li>
             </ul>
             <div class="hamburger" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
@@ -49,7 +49,63 @@
 
     <!--Health Blogs-->
 
+ <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>O&GbyDrSyakira</h4>
+                <p>Empowering the best for you and your baby</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="#about">About Me</a>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#blog">Health Blog</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Dr. Syakira O&G. All Rights Reserved.
+        </div>
+    </footer>
 
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animation on Scroll
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Simple Form Validation Alert (To demonstrate security awareness)
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const concern = document.getElementById('concern').value;
+            
+            // Simulate Input Sanitization Check
+            if (concern.includes('<script>') || concern.includes('SELECT *')) {
+                alert("Security Alert: Invalid characters detected.");
+                return false;
+            }
+            
+            alert("Thank you, " + name + ". Your encrypted request has been sent to our secure server.");
+            return false; // Prevent actual submission for this demo
+        }
+    </script>
 
 
 
